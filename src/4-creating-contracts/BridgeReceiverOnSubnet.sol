@@ -11,9 +11,9 @@ import "@teleporter/ITeleporterReceiver.sol";
 import "./MyERC20Token.sol";
 import "./BridgeActions.sol";
 
-contract TokenMinterReceiverOnBulletin is ITeleporterReceiver {
+contract TokenMinterReceiverOnDestination is ITeleporterReceiver {
     TeleporterRegistry public immutable teleporterRegistry =
-        TeleporterRegistry(0x827364Da64e8f8466c23520d81731e94c8DDe510);
+        TeleporterRegistry(0x55e1dcC96FaBD72a104eAa7ae333F97554BA103B);
     address public tokenAddress;
 
     function receiveTeleporterMessage(bytes32, address, bytes calldata message) external {

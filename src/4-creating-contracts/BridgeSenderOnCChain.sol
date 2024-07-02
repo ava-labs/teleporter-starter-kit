@@ -12,7 +12,7 @@ import "./BridgeActions.sol";
 contract ERC20MinterSenderOnCChain {
     // The Teleporter registry contract manages different Teleporter contract versions.
     TeleporterRegistry public immutable teleporterRegistry =
-        TeleporterRegistry(0x827364Da64e8f8466c23520d81731e94c8DDe510);
+        TeleporterRegistry(0x17aB05351fC94a1a67Bf3f56DdbB941aE6c63E25);
 
     /**
      * @dev Sends a message to another chain.
@@ -23,7 +23,7 @@ contract ERC20MinterSenderOnCChain {
         messenger.sendCrossChainMessage(
             TeleporterMessageInput({
                 // Replace with chain id of your Subnet (see instructions in Readme)
-                destinationBlockchainID: 0xd7cdc6f08b167595d1577e24838113a88b1005b471a6c430d79c48b4c89cfc53,
+                destinationBlockchainID: 0x3ad215cfcefedc0e0e85aabf46c2a8ad09351235007955c877df81ae911d6511,
                 destinationAddress: destinationAddress,
                 feeInfo: TeleporterFeeInfo({feeTokenAddress: address(0), amount: 0}),
                 requiredGasLimit: 100000,
@@ -38,7 +38,7 @@ contract ERC20MinterSenderOnCChain {
 
         messenger.sendCrossChainMessage(
             TeleporterMessageInput({
-                destinationBlockchainID: 0xd7cdc6f08b167595d1577e24838113a88b1005b471a6c430d79c48b4c89cfc53,
+                destinationBlockchainID: 0x3ad215cfcefedc0e0e85aabf46c2a8ad09351235007955c877df81ae911d6511,
                 destinationAddress: destinationAddress,
                 feeInfo: TeleporterFeeInfo({feeTokenAddress: address(0), amount: 0}),
                 requiredGasLimit: 100000,

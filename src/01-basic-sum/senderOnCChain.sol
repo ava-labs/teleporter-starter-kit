@@ -13,7 +13,7 @@ contract SenderOnCChain {
     /**
      * @dev Sends a message to another chain.
      */
-    function sendMessage(address destinationAddress, string calldata message) external {
+    function sendMessage(address destinationAddress, uint256 message) external {
         messenger.sendCrossChainMessage(
             TeleporterMessageInput({
                 // Replace with blockchainID of your Subnet (see instructions in Readme)
